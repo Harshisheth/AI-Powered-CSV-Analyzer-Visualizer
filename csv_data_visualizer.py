@@ -4,7 +4,7 @@ import plotly.express as px
 import io
 import google.generativeai as genai
 import pandas as pd
-genai.configure(api_key="AIzaSyClHUjDfQwYWYxDGstsxZ4uCtzFSyEIlO0")  
+genai.configure(api_key="your_api_key")  
 model = genai.GenerativeModel("gemini-1.5-pro")  
 def generate_insights_from_data(df):
     prompt = f"""
@@ -62,3 +62,4 @@ if uploaded_file:
         st.warning("Not enough numeric columns to display a chart.")
 else:
     st.info("Please upload a CSV file to get started.")
+
